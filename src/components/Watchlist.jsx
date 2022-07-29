@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { Context } from "../Context";
+import { Link } from "react-router-dom";
 
 function Watchlist(){
     const {watchlist, removeMovie, removeAllMovie} = useContext(Context)
@@ -38,9 +39,28 @@ function Watchlist(){
 
 
     return (
-      <div className="watchlist">
-        {renderWatchlist}
-        <button onClick={() => removeAllMovie}>Remove All</button>
+      <div className="container watchlist">
+            <header>
+              <h1>My Watchlist</h1>
+              <Link to="/">
+                <p>Search for Movies</p>
+              </Link>
+            </header>
+            {watchlist.length > 0 ? 
+            <div>
+            {renderWatchlist}
+            <button onClick={() => removeAllMovie()}>Remove All</button>
+          </div>
+         : 
+          <div>
+            <p>Your watchlist is looking a little empty</p>
+            <Link to="/">
+              <button>Let's add some movies</button>
+            </Link>
+          </div>
+        }
       </div>
     );
 }
+
+export default Watchlist

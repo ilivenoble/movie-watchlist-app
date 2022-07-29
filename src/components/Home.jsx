@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../Context";
+import { Link } from "react-router-dom";
 function Home() {
   const {
     movieTitle,
@@ -40,11 +41,17 @@ function Home() {
   });
 
   return (
-    <div>
+    <div className="container home">
+      <header>
+        <h1>Find your film</h1>
+        <Link to="/watchlist">
+          <p>My watchlist</p>
+        </Link>
+      </header>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name=""
+          name="movieTitle"
           placeholder="Enter movie title"
           value={movieTitle}
           onChange={handleChange}

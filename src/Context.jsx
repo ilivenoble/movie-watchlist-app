@@ -35,7 +35,9 @@ function ContextProvider({ children }) {
   }
 
   function removeMovie(id){
-    watchlist((prevMovies) => prevMovies.filter((item) => item.id !== id));
+    setWatchlist((prevMovies) =>
+      prevMovies.filter((item) => item.imdbID !== id)
+    );
   }
 
   function removeAllMovie(){
