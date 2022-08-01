@@ -69,7 +69,7 @@ function Home() {
             className="flex flex-col md:flex-row justify-center items-center "
           >
             <input
-              className="bg-gray-200 focus:bg-blue-200 border border-gray-300 text-gray-900 text-sm  rounded-lg md:rounded-l-lg w-full sm:w-2/4 h-10 text-4xl py-6 text-center"
+              className="bg-gray-200 focus:bg-blue-200 border border-gray-300 text-gray-900 text-sm  sm:rounded-l-lg w-full sm:w-2/4 h-10 text-4xl py-6 text-center"
               type="text"
               name="movieTitle"
               placeholder="Enter movie title"
@@ -77,7 +77,7 @@ function Home() {
               onChange={handleChange}
             />
             <button
-              className="relative bottom-0 bg-white h-12 text-blue-800 px-4 py-2 my-3 rounded-lg sm:rounded-r-lg font-bold"
+              className="relative bottom-0 bg-gray-900 h-12 text-white px-4 py-2 my-3 sm:rounded-r-lg font-bold"
               type="submit"
             >
               Search Movie
