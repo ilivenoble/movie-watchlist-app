@@ -3,14 +3,15 @@ import Home from "./components/Home";
 import Watchlist from "./components/Watchlist";
 import { Routes, Route } from "react-router-dom";
 
+
 function App() {
   return (
-    <div>
+    <main className="flex flex-col justify-center bg-black text-white font-sans">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/watchlist" element={<Watchlist />} />
       </Routes>
-    </div>
+    </main>
   );
 }
 
