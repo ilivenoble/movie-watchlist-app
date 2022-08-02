@@ -18,11 +18,11 @@ function ContextProvider({ children }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://www.omdbapi.com/?s=${movieTitle}&apikey=201a449d`)
+    fetch(`https://www.omdbapi.com/?s=${movieTitle}&apikey=201a449d`)
       .then((response) => response.json())
       .then((data) =>
         data.Search.map((movie) => {
-          fetch(`http://www.omdbapi.com/?t=${movie.Title}&apikey=201a449d`)
+          fetch(`https://www.omdbapi.com/?t=${movie.Title}&apikey=201a449d`)
             .then((response) => response.json())
             .then((data) => setMovieData((prevMovie) => [data, ...prevMovie]));
         })
